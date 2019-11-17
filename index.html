@@ -1,26 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta name="viewport" content="wiwdth = device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="fontawesome.css" type="tex/css">
-	<link rel="stylesheet" type="text/css" href="style.css">
+  <title>Geo Seach</title>
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta charset="utf-8">
 
-	<title></title>
+  <!-- Stylesheets. -->
+  
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="showcase">
-			<div class="showcase-top">
-				<img src="images/logo.png" alt="" />
-				<a href="#" class="btn btn-rounded">Sign In</a>
-			</div>
-			<div class="showcase-content">
-				<h1>See what's next</h1>
-				<p>Watch anywhere. Cancel Anytime</p>
-				<a href="#" class="btn btn-xl"
-					>Watch Free For 30 Days <i class="fas fa-chevron-right btn-icon"></i
-				></a>
-			</div>
-		</header>
-		<script type="text/javascript" src="main.js"></script>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col  ">
+        <input class="form-control" id="search" type="text" placeholder="Search for places..." />
+      </div>
+    </div>
+    
+
+    <div class="row" >
+      <div class="col">
+        <div id="map"></div>
+      </div>
+    </div>
+  </div>
+ 
+  
+  
+  <!-- Google Maps scripts. -->
+  <script src="script.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAiEHA4-50vi-BB5i4aDJmPjkTg7ogfEg&callback=createMap&libraries=places" async defer></script>
 </body>
 </html>
