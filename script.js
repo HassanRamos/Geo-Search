@@ -1,12 +1,14 @@
 let map;
 
+// function to desplay deffault map
 function createMap () {
   const options = {
-    center: { lat: 43.654, lng: -79.383 },
+    center: { lat:  -4.036878, lng: 39.669571},
     zoom: 10
   };
 
   map = new google.maps.Map(document.getElementById('map'), options);
+
 
   let input = document.getElementById('search');
   let searchBox = new google.maps.places.SearchBox(input);
@@ -14,7 +16,8 @@ function createMap () {
   map.addListener('bounds_changed', function() {
     searchBox.setBounds(map.getBounds());
   });
-
+ 
+ // array to store markers 
   let markers = [];
   
   searchBox.addListener('places_changed', function () {
